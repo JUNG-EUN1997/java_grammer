@@ -9,113 +9,133 @@ import java.util.TreeMap;
 
 public class C09Map {
     public static void main(String[] args) {
-//        Map<String, String> myMap = new HashMap<>();
-//        myMap.put("basketball","농구");
-//        myMap.put("soccer","축구");
-//        myMap.put("baseball","야구");
-////        System.out.println(myMap);
-////        System.out.println(myMap.get("soccer"));
-//        myMap.put("baseball","야호!");
-//        myMap.remove("soccer");
-////        System.out.println(myMap);
-////        putIfAbsent : 비어있으면 put
-//        myMap.putIfAbsent("basketball","배구");
-//        getOrDefault : key가 없으면 default값 return
-//        System.out.println(myMap.getOrDefault("baseball","비어있음"));
-//        containsKey : 값이 있으면 key return
-//        System.out.println(myMap.containsKey("baseb`all"));
+        // 	Map<String, String> myMap = new HashMap<>();
+        // 	myMap.put("basketball", "농구");
+        // 	myMap.put("baseball", "야구");
+        // 	myMap.put("soccer", "축구");
+        // 	System.out.println(myMap);
+        // 	System.out.println(myMap.get("soccer"));
+        // 	myMap.put("basketball", "크리켓");
+        //
+        // //	baseball을 map에서 검색하는 복잡도 O(1)
+        // 	System.out.println(myMap.get("baseball"));
+        // 	System.out.println(myMap);
+        // //	putIfAbsent : 비어있으면 put
+        // 	myMap.putIfAbsent("basketball", "배구");
+        // 	System.out.println(myMap);
+        // //	getOrDefault : key가 없으면 default값 return
+        // 	System.out.println(myMap.getOrDefault("baseball", "비어있음"));
 
+        // 	String[] arr = {"농구", "농구", "배구", "야구", "배구"};
+        // 	Map<String, Integer> myMap = new HashMap<>();
+        // 	for (String s : arr) {
+        // 		if (myMap.containsKey(s)) {
+        // 			myMap.put(s, myMap.get(s) + 1);
+        // 		} else {
+        // 			myMap.put(s, 1);
+        // 		}
+        // 		// myMap.put(s, myMap.getOrDefault(s, 0) + 1);
+        // 	}
+        // 	System.out.println(myMap);
+        //
+        // //	keySet() : 키목록을 반환
+        // //	valyes() : value목록을 반환
+        //
+        // //	enhanced for문을 통해 Key값 하나씩 출력 // index가 없음
+        // 	for (String a : myMap.keySet()) {
+        // 		System.out.println(a);
+        // 		System.out.println(myMap.get(a));
+        // 	}
+        //
+        // 	for (int a : myMap.values()) {
+        // 		System.out.println(a);
+        // 	}
 
-//        농구 2 , 배구 2, 야구 1 로 출력하기
-//        String[] arr = {"농구", "농구", "배구", "야구","배구"};
-//        Map<String, Integer> myMap = new HashMap<>();
-//        for (String a : arr){
-////            방안 1
-////            myMap.putIfAbsent(a, "0");
-////            int count = Integer.parseInt(myMap.get(a));
-////            myMap.put(a, String.valueOf((count+1)));
-//
-////            방안2
-////            if(myMap.containsKey(a)){
-////                myMap.put(a,myMap.get(a)+1);
-////            }else{
-////                myMap.put(a,1);
-////            }
-////            방안3
-//            myMap.put(a, myMap.getOrDefault(a,0)+1);
-//
-//        }
-//        Map<String, Integer> myMap = new HashMap<>();
-//        myMap.put("key1",1);
-//        myMap.put("key2",2);
-//        myMap.put("key3",3);
-////        iterator를 통해 key값 하나씩 출력
-//        Iterator<String> myIter = myMap.keySet().iterator();
-////        next()메서드는 데이터를 하나씩 소모시키면서 return
-//        System.out.println(myIter.next());
-////        hasNext() : iterator 안에 값이 있는지 boolean return
-//        while (myIter.hasNext()){
-//            System.out.println(myIter.next());
-//        }
+        //	iterator를 통해 Key값 하나씩 출력 //inex가 없음
+        // 	Iterator<String> myIter = myMap.keySet().iterator();
+        // //	next()메서드는 데이터를 하나씩 소모시키면서 return;
+        // // 	System.out.println(myIter.next());
+        //
+        // //	hasNext() : iterator안에 값이 있는지 없는지 boolean return
+        // 	while (myIter.hasNext()) {
+        // 		System.out.println(myIter.next());
+        // 	}
 
-//        완주하지 못 한 선수 : 프로그래머스
-//        String[] participant = {"mislav", "stanko", "mislav", "ana"};
-//        String[] completion = {"stanko", "ana", "mislav"};
-//        String answer = "";
-//        Map<String,Integer> player = new HashMap<>();
-//        for (String p : participant){
-//            player.put(p,player.getOrDefault(p,0)+1);
-//        }
-//        for (String c : completion){
-//            player.put(c, player.getOrDefault(c,0)-1);
-//        }
-//        Iterator<String> playerIter = player.keySet().iterator();
-//        while (playerIter.hasNext()){
-//            String thisPlayerKey = playerIter.next();
-//            int failPlayerCount = player.get(thisPlayerKey);
-//            System.out.println(failPlayerCount);
-//            if(failPlayerCount > 0){
-//                answer += thisPlayerKey;
-//            }
-//        }
-//
-//        System.out.println(answer);
-//        System.out.println(player);
+        // String[] participant = {"marina", "josipa", "nikola", "vinko", "filipa"};
+        // String[] completion = {"josipa", "filipa", "marina", "nikola"};
+        // Arrays.sort(partic/*ipant);
+        // Arrays.sort(completion);
+        //
+        // for (int i = 0; i < participant.length - 1; i++) {
+        // 	if (!participant[i].equals(completion[i])) {
+        // 		System.out.println(participant[i]);
+        // 		break;
+        // 	}
+        // }
+        // System.out.println(p*/articipant[participant.length -1]);
+        //
+        // Map<String, Integer> parti = new HashMap<>();
+        // for (String s : participant) {
+        // 	parti.put(s, parti.getOrDefault(s, 0) + 1);
+        // }
+        //
+        // for (String s : completion) {
+        // 	if (parti.containsKey(s)) {
+        // 		if (parti.get(s) == 1) {
+        // 			parti.remove(s);
+        // 		} else {
+        // 			parti.put(s, parti.get(s) - 1);
+        // 		}
+        // 	}
+        // }
 
+        //프로그래머스) 의상
+        // String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
+        // Map<String, Integer> clothesMap = new HashMap<>();
+        //
+        // for (int i = 0; i < clothes.length; i++) {
+        // 	clothesMap.put(clothes[i][1], clothesMap.getOrDefault(clothes[i][1], 0) + 1);
+        // }
+        // int answer = 1;
+        // for (Integer i : clothesMap.values()) {
+        // 	answer *= (i + 1);
+        // }
+        // answer--;
+        // System.out.println(answer);
 
-//        의상 : 프로그래머스
-//        String[][] clothes = {{"yellow_hat", "headgear"}, {"blue_sunglasses", "eyewear"}, {"green_turban", "headgear"}};
-//        int answer = 0;
+        //	LinkedHashMap : 데이터 삽입순서 유지
+        // 	Map<String, Integer> linkedMap = new LinkedHashMap<>();
+        // 	linkedMap.put("hello5", 1);
+        // 	linkedMap.put("hello4", 1);
+        // 	linkedMap.put("hello3", 1);
+        // 	linkedMap.put("hello2", 1);
+        // 	linkedMap.put("hello1", 1);
+        // 	System.out.println(linkedMap);
 
+        //	TreeMap : key를 통해 데이터를 정렬 (최적화) // 정렬이 필요한 상황에서는 treemap 사용하기
+        // 	Map<String, Integer> treeMap = new TreeMap<>();
+        // 	treeMap.put("hello5", 1);
+        // 	treeMap.put("hello4", 1);
+        // 	treeMap.put("hello3", 1);
+        // 	treeMap.put("hello2", 1);
+        // 	treeMap.put("hello2", 1);
+        // 	treeMap.put("hello1", 1);
+        // 	System.out.println(treeMap);
 
-//        treeMap
-//        Map<String,Integer> treeMap = new TreeMap<>();
-//        treeMap.put("hellp",1);
-//        treeMap.put("hellp2",2);
-//        treeMap.put("hellp3",3);
-//        treeMap.put("hellp4",4);
-//        System.out.println(treeMap);
-
-
-//        문자열 내 마음대로 정렬하기 : 프로그래머스
-        String[] strings = {"abce", "abcd", "cdx"};
-        int n = 2;
-        int count = 0;
-        String[] answer = new String[strings.length];
-        Map<String,String> strTreeMap = new TreeMap<>();
-        for (int i = 0; i < strings.length; i++) {
-            String newWord = strings[i].substring(n,n+1);
-            strTreeMap.put(strings[i],newWord);
-            System.out.println(newWord);
-        }
-        System.out.println(strTreeMap);
-        Iterator<String> strIter = strTreeMap.keySet().iterator();
-        while (strIter.hasNext()){
-            String thisKey = strIter.next();
-            answer[count] = thisKey;
-            count++;
-        }
-        System.out.println(Arrays.toString(answer));
+        // 프로그래머스) 문자열 내 마음대로 정렬하기
+        // String[] strings = {"sun", "bed", "car"};
+        // Map<String, String> treeMap = new TreeMap<>();
+        // int n = 1;
+        // String[] answer = new String[strings.length];
+        // for (String s : strings) {
+        // 	treeMap.put(s.charAt(n) + s, s);
+        // }
+        // int idx  = 0;
+        // for (String s : treeMap.values()) {
+        // 	answer[idx] = s;
+        // 	idx++;
+        // }
+        // System.out.println(Arrays.toString(answer));
 
 
     }
