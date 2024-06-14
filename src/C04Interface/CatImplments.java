@@ -1,14 +1,14 @@
 package C04Interface;
 
-public class CatImplments implements AnimalInterface1{
+public class CatImplments implements AnimalInterface1 {
 
     @Override
-    public void makeSound(){
+    public void makeSound() {
         System.out.println("야옹");
     }
 }
 
-class CatMultiImplments implements AnimalInterface1,AnimalInterface2{
+class CatMultiImplments implements AnimalInterface1, AnimalInterface2 {
     @Override
     public void makeSound() {
         System.out.println("야옹");

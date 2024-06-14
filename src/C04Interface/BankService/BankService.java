@@ -1,2 +1,5 @@
-package C04Interface.BankService;public interface BankServide {
+package C04Interface.BankService;
+
+public interface BankService {
+
 }
