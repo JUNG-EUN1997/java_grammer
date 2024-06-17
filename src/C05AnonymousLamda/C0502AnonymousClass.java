@@ -1,4 +1,4 @@
-package C05AnonymousLambda;
+package C05AnonymousLamda;
 
 import java.util.*;
 
@@ -125,42 +125,6 @@ public class C0502AnonymousClass {
         }
 
     }
-}
-
-class Student implements Comparable<Student>{ // Comparable의 Target Object를 알려주는 형식
-    String name;
-    int age;
-    Student(String name, int age){
-        this.name = name;
-        this.age = age;
-    };
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-//    모든 클래스의 조상클래스인 Object 클래스의 toString 메서드를 Overriding 하여
-//    객체 호출시에 자동으로
-    @Override
-    public String toString(){
-        return this.name + " " + this.getAge();
-    }
-
-
-    @Override
-    public int compareTo(Student s) { // 비교할 대상이 나 자신인 오브젝트
-//        return this.age - s.getAge(); // 1 > 10 오름차순
-//        return this.age - s.getAge(); // 10 > 1 내림차순
-//        return this.name.compareTo(s.getName()); // ㄱ > ㅎ 오름차순
-        return s.name.compareTo(this.getName()); // ㅎ > ㄱ 내림차순
-    }
-
-
-
 }
 
 interface Animal{
