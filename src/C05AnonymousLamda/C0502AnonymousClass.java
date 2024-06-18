@@ -65,19 +65,19 @@ public class C0502AnonymousClass {
 //        Collections.sort(myList,Comparator.naturalOrder());
 //        System.out.println(myList);
 
-        List<Student> students = new ArrayList<>();
-        students.add(new Student("홍길동",16));
-        students.add(new Student("성춘향",20));
-        students.add(new Student("흥부",54));
-        students.add(new Student("놀부",56));
-        students.add(new Student("두껍이",2));
+//        List<Student> students = new ArrayList<>();
+//        students.add(new Student("홍길동",16));
+//        students.add(new Student("성춘향",20));
+//        students.add(new Student("흥부",54));
+//        students.add(new Student("놀부",56));
+//        students.add(new Student("두껍이",2));
 //        ⭐방법1.⭐ Student객체에서 Comparable을 구현 => comparaTo 메서드를 오버라이딩
-        Collections.sort(students);
+//        Collections.sort(students);
 //        for (Student i : students) {
 //            System.out.println(i.getName() + " " + i.getAge());
 ////            System.out.println(i.getName());
 //        }
-        System.out.println(students);
+//        System.out.println(students);
 
 //        ⭐방법2.⭐ Comparator를 구현한 익명객체를 sort에 주입
 //        Comparator<Student> myComparator = new Comparator<Student>() {
