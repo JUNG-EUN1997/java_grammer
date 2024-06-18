@@ -20,7 +20,7 @@ public class C0504StreamApi {
 //        Arrays.stream(arr).forEach(System.out::println);
 
 
-//        스트림의 생성
+//        ----------------------------------------------------------------------------------------------- 스트림의 생성 시작
 //        String[] stArr = {"HTML", "CSS", "JAVA", "PYTHON"};
 ////        Stream<클래스명> : 제네릭타입으로 stream객체가 생성 >> 꺽새(<>)를 제네릭이라고 함
 //        Stream<String> stream1 = Arrays.stream(stArr);
@@ -43,7 +43,11 @@ public class C0504StreamApi {
 
 
 
-////        stream 변환(중개연산) : filter, map, sorted, distinct, limit
+//      ----------------------------------------------------------------------------------------------- 스트림의 시작 끝
+//      ----------------------------------------------------------------------------------------------- 스트림의 중개연산 시작
+//        stream 변환(중개연산) : filter, map, sorted, distinct, limit
+
+
 //        String[] stArr = {"HTML", "CSS", "JAVA", "PYTHON"};
 ////        filter : 특정기준으로 대상을 filtering 하는 것
 ////        참조변수 스트림변환의 경우 제네릭의 타입소거 문제 발생
