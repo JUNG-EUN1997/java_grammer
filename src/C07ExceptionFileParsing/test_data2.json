@@ -1,0 +1,14 @@
+[
+  {
+    "id" : 1,
+    "name" : "홍길동",
+    "classNumber" : "1",
+    "city" : "seoul"
+  },
+  {
+    "id" : 2,
+    "name" : "몽룡",
+    "classNumber" : "2",
+    "city" : "jeju"
+  }
+]
