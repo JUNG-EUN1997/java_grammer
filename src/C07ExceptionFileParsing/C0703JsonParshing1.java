@@ -38,6 +38,16 @@ public class C0703JsonParshing1 {
     }
 }
 
+
+// 참고 url : https://www.notion.so/ara-boka/25-JAVA-625f97ee58044748983a9cebc48cd38d?pvs=4#9395614301964e0d961cf3c2b2a935b3
+// objectMapper는 getter 또는 setter 메서드 명을 통해 필드값을 유추한다.
+//          하지만, setter의 경우는 class에 잘 사용하지 않으니 setter말고 getter을 사용하기를 권장한다.
+// 실제 값의 setting은 reflection이라는 기술을 통해 변수 값에 할당한다.
+//          reflection 란?
+//              1. 런타임 상황에 동작한다.
+//                  1-2. 따라서, private 변수에도 접근하여 값을 가져올 수 있다. >> ((이걸 리플랙션 해준다! 라고 한다.))
+//              2. 런타임 중 클래스, 메서드, 변수에 접근할 수 있다.
+
 class Student{
     private int id;
     private String name;
